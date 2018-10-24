@@ -1,7 +1,6 @@
 var exec = require('cordova/exec');
 
 module.exports.printMethod = function (arg0, success, error)
-module.exports.printMethod = function (arg0, success, error)
 {
     exec(success, error, 'printer', 'printMethod', [arg0]);
 };

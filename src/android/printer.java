@@ -47,14 +47,14 @@ public class printer extends CordovaPlugin
     }
     
     // Fonction d'addition
-    private void plus(JSONArray args, CallBackContext cBack)
+    private void plus(JSONArray args, CallbackContext cBack)
     {
         if(args != null)
         {
             try
             {
-                int one = Integer.ParseInt(args.getJSONObject(0).getString("arg1"));
-                int two = Integer.ParseInt(args.getJSONObject(0).getString("arg2"));
+                int one = Integer.parseInt(args.getJSONObject(0).getString("arg1"));
+                int two = Integer.parseInt(args.getJSONObject(0).getString("arg2"));
                 cBack.success(one + two);
             }
             catch(Exception exp)
@@ -69,14 +69,14 @@ public class printer extends CordovaPlugin
     }
     
     // Fonction de soustraction
-    private void moin(JSONArray args, CallBackContext cBack)
+    private void moin(JSONArray args, CallbackContext cBack)
     {
         if(args != null)
         {
             try
             {
-                int one = Integer.ParseInt(args.getJSONObject(0).getString("arg1"));
-                int two = Integer.ParseInt(args.getJSONObject(0).getString("arg2"));
+                int one = Integer.parseInt(args.getJSONObject(0).getString("arg1"));
+                int two = Integer.parseInt(args.getJSONObject(0).getString("arg2"));
                 cBack.success(one - two);
             }
             catch(Exception exp)
